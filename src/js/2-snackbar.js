@@ -22,10 +22,16 @@ const onPromiseFormSubmit = event => {
   });
   userDelayPromise
     .then(delay => {
-      iziToast.success({ message: `✅ Fulfilled promise in ${delay}ms` });
+      iziToast.success({
+        message: `✅ Fulfilled promise in ${delay}ms`,
+        position: 'topRight',
+      });
     })
     .catch(delay => {
-      iziToast.error({ message: `❌ Rejected promise in ${delay}ms` });
+      iziToast.error({
+        message: `❌ Rejected promise in ${delay}ms`,
+        position: 'topRight',
+      });
     });
   refs.promiseForm.reset();
 };
