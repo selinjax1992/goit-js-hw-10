@@ -72,7 +72,11 @@ const onClickStartBtn = () => {
       clearInterval(intervalId);
       updateTimerInterface({ days: 0, hours: 0, minutes: 0, seconds: 0 });
       refs.input.disabled = false;
-      iziToast.success({ message: 'TimeOut', position: 'topRight' });
+      iziToast.success({
+        message: 'TimeOut',
+        title: 'Complete!',
+        position: 'topRight',
+      });
     }
   }
   refs.startBtn.disabled = true;
